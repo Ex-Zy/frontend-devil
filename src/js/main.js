@@ -1,9 +1,6 @@
-/*
- Third party
- */
-//= ../../bower_components/jquery/dist/jquery.min.js
+//= lib/jquery.min.js
 
-/*
-    Custom
- */
-//= partials/helper.js
+$(document).ready(function() {
+	// go js
+	//= partials/example.js
+});

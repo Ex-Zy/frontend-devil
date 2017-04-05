@@ -25,14 +25,14 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/main.js',
-        style: 'src/style/main.scss',
+        style: 'src/style/*.{sass,scss}',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/**/*.{sass,scss}',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -79,7 +79,7 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/style/'],
-            outputStyle: 'compressed',
+            outputStyle: 'compressed',  // nested, expanded, compact, compressed
             sourceMap: true,
             errLogToConsole: true
         }))
